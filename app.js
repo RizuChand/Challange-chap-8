@@ -11,6 +11,9 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(errorHandler)
 
+const swaggerUi = require('swagger-ui-express')
+const apiDocumentation = require('./openapi.json')
+app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(apiDocumentation))
 /**
  * @Routes /api
  * entrypoint for all API routes
