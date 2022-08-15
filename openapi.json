@@ -152,18 +152,11 @@
             "in": "path",
             "description": "Enter ID",
             "required": true,
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "exp": {
-                      "type":"integer"
-                    }
-                  }
-                }
-              }
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
+           
           }
         ],
         "responses": {
